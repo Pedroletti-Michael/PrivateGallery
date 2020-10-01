@@ -21,8 +21,8 @@
         <script rel="javascript" src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
     </head>
     <body>
-    <h1>TEST1234</h1>
-    <br><br><br><br>
-    <?= $content; ?>
+        <h1>TEST1234</h1>
+        <br><br><br><br>
+        <?= $content; ?>
     </body>
 </html>

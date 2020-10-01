@@ -9,7 +9,7 @@ ob_start();
 
 ?>
 
-<form method="post" action="../index.php?action=requestLogin">
+<form method="post" action="../MVC/index.php?action=requestLogin">
     <div class="d-inline-block w-100 pt-2 mb-2">
         <label for="inputLogin" class="font-weight-bold">Nom d'utilisateur</label>
         <div class="input-group mb-2 mr-sm-2 ">
