@@ -8,7 +8,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
+    <>
         <link rel="icon" type="image/png" href="../images/favicon-32x32.png">
 
         <meta charset="utf-8">
@@ -16,16 +16,16 @@
         <meta name="description" content="">
         <meta name="author" content="Pedroletti Michael and Theo Cook">
 
-        <link rel="stylesheet" href="../view/bootstrap-4.4.1-dist/css/bootstrap.css">
-        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-grid.css">
-        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-        <script rel="javascript" src="bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
-        <script rel="javascript" src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
-    </head>
+        <link rel="stylesheet" href="../MVC/view/css/style.css">
+    </header>
 
     <body>
-        <h1 class="text-danger">TEST1234</h1>
+    <div class="p-2">
+        <img src="../MVC/img/template.PNG" class="w-100 h-auto">
+    </div>
         <?= $content; ?>
     </body>
 </html>
