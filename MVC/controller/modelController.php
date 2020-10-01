@@ -20,3 +20,8 @@ function login($usrName, $pwd){
     $_SESSION['userLogged'] = true;
     return true;
 }
+
+function signOut(){
+    $_SESSION['userLogged'] = false;
+    return true;
+}
