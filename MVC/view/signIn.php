@@ -21,7 +21,6 @@ ob_start();
         <div class="input-group mb-2 mr-sm-2">
             <input type="password" class="form-control w-100" id="userPassword" name="userPassword" placeholder="Mot de passe" required>
         </div>
-        <div class="w-100 mb-2"><a>Un problème pour vous connecter ? Contactez le <a href="mailto:helpdesk@heig-vd.ch?subject=Plateforme GVM : [Titre de votre message]">helpdesk</a></a></div>
         <button type="submit" class="input-group btn btn-success w-auto m-auto w3-center">Connexion</button>
     </div>
     <?php

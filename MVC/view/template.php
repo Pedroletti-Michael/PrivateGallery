@@ -13,6 +13,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="Pedroletti Michael and Theo Cook">
+
+        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.css">
+        <script rel="javascript" src="bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+        <script rel="javascript" src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
     </head>
     <body>
     <h1>TEST1234</h1>
