@@ -22,18 +22,36 @@ function displayDashboard(){
 function displaySignIn($post){
     require_once 'controller/modelController.php';
 
+    //if $post = false
     if($post == false){
+        //if is connected we return in dashboard
         if(isUserConnected()){
             $_GET['action'] = 'dashboard';
             require 'view/dashboard.php';
         }
+        //else we going to signIn
         else{
             $_GET['action'] = 'signIn';
             require 'view/signIn.php';
         }
     }
+    //else $post != false we need to try to login
     else{
-        //TODO LOGIN AND AFTER DISPLAY dashboard
+        $userName = $post['userName'];
+        $pwd = $post['pwd'];
+        //try to login with data send by user
+        if(login($userName, $pwd)){
+            //login success, go to dashboard
+            $_GET['action'] = 'dashboard';
+            $_POST['successMessage'] = 'loginSuccess';
+            require 'view/dashboard.php';
+        }
+        //if login failed, go to signIn with an error message
+        else{
+            $_GET['action'] = 'signIn';
+            $_POST['error'] = 'loginFailed';
+            require 'view/signIn.php';
+        }
     }
 
 }

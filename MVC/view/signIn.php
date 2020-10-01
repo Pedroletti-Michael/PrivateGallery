@@ -25,11 +25,8 @@ ob_start();
         <button type="submit" class="input-group btn btn-success w-auto m-auto w3-center">Connexion</button>
     </div>
     <?php
-    if(isset($_POST['error']) && $_POST['error'] == "credentials"){
+    if(isset($_POST['error']) && $_POST['error'] == "loginFailed"){
         echo "<div style='color: red'>Indentifiant ou mot de passe invalide.</div>";
-    }
-    if(isset($_POST['error']) && $_POST['error'] == "fieldEmpty"){
-        echo "<div style='color: red'>Veuillez renseigner tous les champs !</div>";
     }
     ?>
     </div>
@@ -37,7 +34,7 @@ ob_start();
 
 <?php
 
-$contenu = ob_get_clean();
-require "gabarit.php";
+$content = ob_get_clean();
+require "template.php";
 
 ?>
