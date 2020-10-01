@@ -25,6 +25,9 @@ if (isset($_GET['action'])) {
         case 'signIn':
             displaySignIn(false);
             break;
+        case 'signOut':
+            displaySignIn('signOut');
+            break;
         case 'requestLogin':
             displaySignIn($_POST);
             break;

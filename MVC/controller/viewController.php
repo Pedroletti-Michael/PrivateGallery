@@ -35,21 +35,33 @@ function displaySignIn($post){
             require 'view/signIn.php';
         }
     }
+    //if action == signOut we need to logout the user and return to the signIn menu
+    elseif($post == 'signOut'){
+        if(signOut()){
+            $_GET['action'] = 'signIn';
+            $_SESSION['successMessage'] = 'signOutSuccess';
+            require 'view/signIn.php';
+        }
+        else{
+            $_GET['action'] = 'dashboard';
+            $_SESSION['error'] = 'signOutFailed';
+            require 'view/dashboard.php';
+        }
+    }
     //else $post != false we need to try to login
     else{
-        $userName = $post['userName'];
         $pwd = $post['pwd'];
         //try to login with data send by user
-        if(login($userName, $pwd)){
+        if(login($pwd)){
             //login success, go to dashboard
             $_GET['action'] = 'dashboard';
-            $_POST['successMessage'] = 'loginSuccess';
+            $_SESSION['successMessage'] = 'loginSuccess';
             require 'view/dashboard.php';
         }
         //if login failed, go to signIn with an error message
         else{
             $_GET['action'] = 'signIn';
-            $_POST['error'] = 'loginFailed';
+            $_SESSION['error'] = 'loginFailed';
             require 'view/signIn.php';
         }
     }

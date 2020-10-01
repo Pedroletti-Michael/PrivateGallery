@@ -15,7 +15,7 @@ function isUserConnected(){
     }
 }
 
-function login($usrName, $pwd){
+function login($pwd){
     //TODO Récupérer les données utilisateurs les comparer et si jamais une correspondance est trouvée on retourne true
     $_SESSION['userLogged'] = true;
     return true;

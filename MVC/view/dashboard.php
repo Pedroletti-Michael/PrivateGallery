@@ -9,6 +9,8 @@ ob_start();
 
 ?>
 
+<h1>DASHBOARD TEST</h1>
+
 <title>Gabriel Lado | #SignIn</title>
 <div style="width: 500px; height: 300px;" class="p-5 rounded center">
     <form method="post" action="../MVC/index.php?action=requestLogin">
@@ -20,18 +22,16 @@ ob_start();
             <button type="submit" class="input-group btn btn-secondary w-auto m-auto w3-center">Accéder</button>
         </div>
         <?php
-        if(isset($_POST['error']) && $_POST['error'] == "loginFailed"){
-            echo "<div style='color: red'>Indentifiant ou mot de passe invalide.</div>";
+        if(isset($_SESSION['successMessage']) && $_SESSION['successMessage'] == 'loginSuccess'){
+            echo "<div style='color: green'>Connexion réussie.</div>";
+        }
+        if(isset($_SESSION['error']) && $_SESSION['error'] == "signOutFailed"){
+            echo "<div style='color: red'>Erreur de déconnexion.</div>";
         }
         ?>
     </form>
 </div>
 
-<?php
-if(isset($_POST['successMessage']) && $_POST['successMessage'] == "loginSuccess"){
-    echo "<div style='color: red'>Connexion réussie</div>";
-}
-?>
 
 <?php
 
