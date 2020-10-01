@@ -8,8 +8,25 @@
 ob_start();
 
 ?>
-<h1>DASHBOARD BESTIOLE LA</h1>
-<br><br><br><br><br><br><br><br>
+
+<title>Gabriel Lado | #SignIn</title>
+<div style="width: 500px; height: 300px;" class="p-5 rounded center">
+    <form method="post" action="../MVC/index.php?action=requestLogin">
+        <div class="d-inline-block w-100 pb-2 text-center">
+            <label for="inputPassword" class="font-weight-bold">Mot de passe de la Galerie</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input type="password" class="form-control w-100" id="pwd" name="pwd" placeholder="Mot de passe" required>
+            </div>
+            <button type="submit" class="input-group btn btn-secondary w-auto m-auto w3-center">Accéder</button>
+        </div>
+        <?php
+        if(isset($_POST['error']) && $_POST['error'] == "loginFailed"){
+            echo "<div style='color: red'>Indentifiant ou mot de passe invalide.</div>";
+        }
+        ?>
+    </form>
+</div>
+
 <?php
 if(isset($_POST['successMessage']) && $_POST['successMessage'] == "loginSuccess"){
     echo "<div style='color: red'>Connexion réussie</div>";
