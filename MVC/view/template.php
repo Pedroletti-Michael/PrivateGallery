@@ -25,13 +25,7 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-        <h1>TEST1234</h1>
-        <br><br><br><br>
+        <h1 class="text-danger">TEST1234</h1>
         <?= $content; ?>
-=======
-    <h1 class="text-danger">TEST1234</h1>
-    <?= $content; ?>
->>>>>>> master
     </body>
 </html>
